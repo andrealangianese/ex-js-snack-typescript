@@ -14,6 +14,36 @@
 // Se è un array: stampa la sua lunghezza
 // Se è una Promise: attendi che si risolva e stampa il valore del resolve.
 
+
+let datoGenerico: unknown
+
+if (typeof datoGenerico === 'string') {
+  console.log(datoGenerico.toUpperCase())
+}
+else if (typeof datoGenerico === 'number') {
+  const raddoppio = (datoGenerico * 2)
+  console.log(raddoppio)
+}
+else if (typeof datoGenerico === 'boolean') {
+  if (datoGenerico) {
+    console.log('si')
+  }
+  else {
+    console.log('no');
+  }
+}
+else if (typeof datoGenerico === null) {
+  console.log('Il dato è vuoto');
+}
+else if (Array.isArray(datoGenerico)) {
+  console.log(datoGenerico.length);
+}
+else {
+  console.log('Tipo non supportato');
+
+}
+
+
 // 🏆 Snack 2
 // Crea un type alias Dipendente che rappresenta un lavoratore con i seguenti dati:
 
