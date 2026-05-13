@@ -58,6 +58,25 @@ else {
 // emailAziendale → Email assegnata al dipendente (non si può modificare)
 // contratto → Specifica il tipo di contratto del dipendente, con valori limitati a “indeterminato”, “determinato” o “freelance”.
 
+type Dipendente = {
+  nome: string,
+  cognome: string,
+  annoNascita: number,
+  sesso: 'M' | 'F',
+  anniDiServizio: number[],
+  readonly emailAziendale: string,
+  contratto: 'indeterminato' | 'determinato' | 'freelance'
+}
+
+const andreone: Dipendente = {
+  nome: "Andrea",
+  cognome: "Langia",
+  annoNascita: 2001,
+  sesso: "M",
+  anniDiServizio: [2020, 2021],
+  emailAziendale: "langia@azienda.it",
+  contratto: "indeterminato"
+};
 // 🏆 Snack 3
 // Estendiamo Dipendente per definire due ruoli specifici all'interno dell'azienda:
 
